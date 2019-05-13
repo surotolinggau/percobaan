@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8">
+		<title>Gallery News</title>
+		<style type="text/css">
+		img{width: 300px; height: 300px;}
+		</style>
+		<script type="text/javascript">
+		var nomor;
+		var nm = new Array ("","1","2","3","4","5");
+		function gb(x){
+			document.getElementById('text').innerHTML = nm[x];
+			var path= "gallery/"+ x +".jpg";
+			document.getElementsByTagName('img')[0].src = path;
+			return false;
+		}
+		function ganti(nama){
+			//ganti foto pada tag img
+			nomor = nama;
+			gb(nama);
+		}
+		function prev(){
+			//ganti foto pada tag img
+			if(nomor<=1){
+				nomor=5;
+			}else{
+			nomor = nomor-1;}
+			gb(nomor);
+		}
+		function next(){
+			//ganti foto pada tag img
+			if(nomor>=5){
+				nomor = 1;
+			}else{
+			nomor = nomor+1;}
+			gb(nomor);
+		}
+		</script>
+	</head>
+		<body onload="ganti(1)">
+		<a href="#" onclick="prev()"><</a>
+		<a href="#" onclick="ganti(1)">1</a>
+		<a href="#" onclick="ganti(2)">2</a>
+		<a href="#" onclick="ganti(3)">3</a>
+		<a href="#" onclick="ganti(4)">4</a>
+		<a href="#" onclick="ganti(5)">5</a>
+		<a href="#" onclick="next()">></a>
+		<br/>
+		<img src="" alt="" /><br/>
+		<p id="text"></p>
+		</body>
+</html>

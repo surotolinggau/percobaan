@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script language="JavaScript" type="text/javascript"> 
+<!--
+    function cb2Unset(id){
+        box = document.getElementById(id);
+        alert(box.checked);
+        if (box.checked==true){
+            testForm.cb2.checked = false;
+        }
+    }
+
+    function cb1Unset(id){
+        box = document.getElementById(id);
+        alert(box.checked);
+        if (box.checked==true){
+            testForm.cb1.checked = false;
+        }
+    }
+-->
+    </script>
+  </head>
+  <body>
+    <form method="post" name="testForm"> 
+    <input checked="checked" value="1" name="cb1" id="cb1" onclick="cb2Unset(this.id)" type="checkbox"> 
+    <input value="1" name="cb2" id="cb2" onclick="cb1Unset(this.id)" type="checkbox"> 
+    </form>
+  </body>
+</html>

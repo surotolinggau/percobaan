@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>animasi galeri gambar</title>
+		<script type="text/javascript">
+		gg= new Array();
+		var i= 0;
+		function muat(){
+			gg[0]= new Image;
+			gg[0].src='gallery/1.jpg';
+			gg[1]= new Image;
+			gg[1].src='gallery/2.jpg';
+			gg[2]= new Image;
+			gg[2].src='gallery/3.jpg';
+			gg[3]= new Image;
+			gg[3].src='gallery/4.jpg';
+		}
+			var s = 1;
+			function jalan(){
+				if(i>=gg.length){gg[0]}
+			
+			document.im.src=gg[i].src;i++;
+			setTimeout('jalan()',1200);
+			document.getElementById('t').innerHTML =s;
+			s++;}
+			window.onload = function(){
+				muat();
+				jalan();
+			};
+		</script>
+	</head>
+		<body>
+		<img src="gallery/4.jpg" name="im" alt="gambar gerak" />
+		<div id="t"></div>
+		</body>
+</html>
